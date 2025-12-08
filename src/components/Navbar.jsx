@@ -6,17 +6,18 @@ const Navbar = ({theme, setTheme})=>{
   return (
     <nav>
       <div className="brand">
+        
         {/* <div className="logo">R</div> */}
         <img 
-  src={myPhoto}
-  alt="Profile"
-  style={{
-    width: 45,
-    height: 45,
-    borderRadius: "50%",
-    objectFit: "cover"
-  }}
-/>
+         src={myPhoto}
+         alt="Profile"
+         style={{
+        width: 45,
+        height: 45,
+        borderRadius: "50%",
+        objectFit: "cover"
+        }}
+        />
 
         <div>
           <div style={{fontWeight:800}}>Rashid Husain</div>

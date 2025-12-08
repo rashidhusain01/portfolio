@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio Premium (React)
 
 ## What’s included
@@ -13,3 +14,6 @@
 - `src/components/Config.js` — quick place to put your name, bio, projects, links and social.
 - `src/App.css` — global styles (colors, fonts).
 - Replace `YOUR_NAME` placeholders if any remain.
+=======
+# portfolio
+>>>>>>> 5ad79ccae4b98d50d25f09a7892c15d1a272b12e
