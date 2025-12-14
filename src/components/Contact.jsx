@@ -12,32 +12,34 @@ const Contact = ({ config }) => {
   const BACKEND_URL = "https://backend-3frb.onrender.com/contact/send";
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setSubmitted(true);
+  e.preventDefault();
 
-    try {
-      const res = await fetch(BACKEND_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
-      });
+  try {
+    const res = await fetch(BACKEND_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    });
 
-      const data = await res.json();
+    const data = await res.json();
 
-      if (data.success) {
-        alert("Message sent successfully!");
-        setName("");
-        setEmail("");
-        setMessage("");
-      } else {
-        alert("Failed to send message");
-      }
-    } catch (error) {
-      alert("Server error, please try again later");
+    if (data.success) {
+      // ✅ पहले fields clear
+      setName("");
+      setEmail("");
+      setMessage("");
+
+      // ✅ फिर submitted true
+      setSubmitted(true);
+
+      setTimeout(() => setSubmitted(false), 2000);
+    } else {
+      alert("Failed to send message");
     }
-
-    setTimeout(() => setSubmitted(false), 2500);
-  };
+  } catch (error) {
+    alert("Server error, please try again later");
+  }
+};
 
   return (
     <section className="container" id="contact">
@@ -72,9 +74,10 @@ const Contact = ({ config }) => {
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
 
-          <button className="cta" type="submit">
-            {submitted ? "Sent ✓" : "Send Message"}
-          </button>
+          <button className="cta" type="submit" disabled={submitted}>
+  {submitted ? "Sent ✓" : "Send Message"}
+</button>
+
         </form>
 
         <div style={{ marginTop: 12, color: "var(--muted)" }}>
