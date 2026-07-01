@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 const Contact = ({ config }) => {
   const [submitted, setSubmitted] = useState(false);
@@ -8,38 +9,43 @@ const Contact = ({ config }) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  // ✅ Backend URL
-  const BACKEND_URL = "https://backend-3frb.onrender.com/contact/send";
+  const SERVICE_ID = "service_ailzoz9";
+  const TEMPLATE_ID = "template_ih3if1q";
+  const PUBLIC_KEY = "m7u5Q-G_bhBPxn6x0";
+
+
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (submitted) return; // 🔒 double submit रोकने के लिए
+  if (submitted) return;
 
-    setSubmitted(true);
+  setSubmitted(true);
 
-    try {
-      const res = await fetch(BACKEND_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
-      });
+  try {
+    await emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      {
+        name: name,
+        email: email,
+        message: message,
+      },
+      PUBLIC_KEY
+    );
 
-      if (res.ok) {
-        // ✅ SUCCESS → fields clear
-        setName("");
-        setEmail("");
-        setMessage("");
-      } else {
-        alert("Failed to send message");
-      }
-    } catch (error) {
-      alert("Server error, please try again later");
-    }
+    setName("");
+    setEmail("");
+    setMessage("");
 
-    // ⏳ Button reset
-    setTimeout(() => setSubmitted(false), 2000);
-  };
+    alert("Message sent successfully!");
+  } catch (error) {
+    console.error(error);
+    alert("Failed to send message.");
+  }
+
+  setTimeout(() => setSubmitted(false), 2000);
+};
 
   return (
     <section className="container" id="contact">
