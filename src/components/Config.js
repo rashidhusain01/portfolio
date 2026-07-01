@@ -21,7 +21,7 @@ const Config = {
   ],
   email: "rh795531@gmail.com",
   socials: {
-    github: "https://github.com/YOUR_GITHUB",
+    github: "https://github.com/rashidhusain01",
     linkedin: "https://linkedin.com/in/YOUR_LINKEDIN"
   }
 };
