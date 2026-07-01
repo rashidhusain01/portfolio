@@ -9,7 +9,7 @@ const Hero = ({config})=>{
       <div className="hero-left">
         <motion.div initial={{opacity:0,y:10}} animate={{opacity:1,y:0}} transition={{duration:0.6}}>
           <h1>Hi, I'm <span style={{color:"var(--accent)"}}>{config.name}</span></h1>
-          <p className="lead">{config.bio}</p>
+          <p className="lead">{config.herobio}</p>
           <div style={{marginTop:18}}>
             <a className="cta" href="#projects">View Projects</a>
             <a style={{marginLeft:12}} className="cta" href={config.socials.github} target="_blank" rel="noreferrer">GitHub</a>

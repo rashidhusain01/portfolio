@@ -1,7 +1,8 @@
 const Config = {
   name: "Rashid Husain",
   title: "Web Developer",
-  bio: "I build modern, accessible and high-performance web applications. I love transforming ideas into beautiful interfaces and clean code.",
+  herobio:"Full-Stack MERN Developer passionate about building responsive, scalable and user-friendly web applications with MongoDB, Express.js, React.js and Node.js.",
+  bio: "I am a passionate Full-Stack MERN Developer with a strong foundation in MongoDB, Express.js, React.js and Node.js. I enjoy building responsive, scalable and user-friendly web applications with clean, maintainable code. I continuously improve my skills by developing real-world projects and exploring modern web technologies to deliver efficient and reliable digital solutions.",
   skills: [
   "HTML",
   "CSS",
