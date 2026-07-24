@@ -1,8 +1,8 @@
 const Config = {
   name: "Rashid Husain",
   title: "Web Developer",
-  herobio:"Full-Stack MERN Developer passionate about building responsive, scalable and user-friendly web applications with MongoDB, Express.js, React.js and Node.js.",
-  bio: "I am a passionate Full-Stack MERN Developer with a strong foundation in MongoDB, Express.js, React.js and Node.js. I enjoy building responsive, scalable and user-friendly web applications with clean, maintainable code. I continuously improve my skills by developing real-world projects and exploring modern web technologies to deliver efficient and reliable digital solutions.",
+  herobio:"Full-Stack MERN Developer with experience in building scalable web applications and AI-powered solutions using React.js, Node.js, Express.js, MongoDB, Python, FastAPI and Retrieval-Augmented Generation (RAG).",
+  bio: "I am a passionate Full-Stack MERN Developer skilled in building modern, scalable and user-friendly web applications using MongoDB, Express.js, React.js and Node.js. I enjoy solving real-world problems through clean, maintainable code and continuously expand my expertise by working on full-stack and AI-powered projects. My goal is to develop high-performance applications that provide seamless user experiences and reliable solutions.",
   skills: [
   "HTML",
   "CSS",
@@ -15,8 +15,8 @@ const Config = {
   "Git & GitHub",
   "Redux Toolkit"],
   projects: [
+    { title: "AI-Powered RAG Chatbot", desc: "AI-powered RAG chatbot for PDF-based question answering using FastAPI, FAISS, OpenRouter GPT-4o Mini and React.", link: "https://ai-rag-chatbot-frontend.vercel.app/", source: "https://github.com/rashidhusain01/AI-RAG-Chatbot-Backend", },
     { title: "Portfolio (This Site)", desc: "Personal portfolio built with React and modern CSS.", link: "#" },
-    { title: "Weather App", desc: "API-driven weather app with clean UI.", link: "#" },
     { title: "E-commerce UI", desc: "Product grid, filters and cart UI prototype.", link: "#" }
   ],
   email: "rh795531@gmail.com",
