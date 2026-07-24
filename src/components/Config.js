@@ -43,7 +43,7 @@ const Config = {
 },
   projects: [
     { title: "AI-Powered RAG Chatbot", desc: "AI-powered RAG chatbot for PDF-based question answering using FastAPI, FAISS, OpenRouter GPT-4o Mini and React.", link: "https://ai-rag-chatbot-frontend.vercel.app/", source: "https://github.com/rashidhusain01/AI-RAG-Chatbot-Backend", },
-    { title: "Portfolio (This Site)", desc: "Personal portfolio built with React and modern CSS.", link: "#" },
+    { title: "Portfolio (This Site)", desc: "Personal portfolio built with React and modern CSS.", link: "https://rashidhusain01.github.io/portfolio/", source: "https://github.com/rashidhusain01/portfolio" },
     { title: "E-commerce UI", desc: "Product grid, filters and cart UI prototype.", link: "#" }
   ],
   email: "rh795531@gmail.com",

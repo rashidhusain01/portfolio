@@ -21,7 +21,7 @@ const Navbar = ({theme, setTheme})=>{
 
         <div>
           <div style={{fontWeight:800}}>Rashid Husain</div>
-          <div style={{fontSize:12,color:"var(--muted)"}}>Web Developer</div>
+          <div style={{fontSize:12,color:"var(--muted)"}}>Full-Stack MERN Developer</div>
         </div>
       </div>
 

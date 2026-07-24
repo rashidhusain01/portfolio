@@ -12,7 +12,7 @@ const Projects = ({config})=>{
             <p>{p.desc}</p>
             <div style={{display:"flex",gap:8}}>
               <a className="cta" href={p.link} target="_blank" rel="noreferrer">View</a>
-              <a style={{alignSelf:"center",marginLeft:8,color:"var(--muted)"}} href={p.link} target="_blank" rel="noreferrer">Source</a>
+              <a style={{alignSelf:"center",marginLeft:8,color:"var(--muted)"}} href={p.source} target="_blank" rel="noreferrer">Source</a>
             </div>
           </motion.div>
         ))}
